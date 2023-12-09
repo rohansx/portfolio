@@ -1,7 +1,14 @@
-import Image from 'next/image'
-
-export default function Home() {
+import { Inter } from 'next/font/google'
+ 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+ 
+export default function MyApp({ Component, pageProps }: { Component: React.ComponentType<any>, pageProps: any }) {
   return (
-    <main className='bg-orange'> Home </main>
+    <main className={`${inter.variable} font-mono`}>
+      <Component {...pageProps} />
+    </main>
   )
 }
