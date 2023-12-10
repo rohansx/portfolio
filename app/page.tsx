@@ -9,6 +9,7 @@ export default function MyApp({ Component, pageProps }: { Component: React.Compo
   return (
     <main className={`${inter.variable} font-mono`}>
       <Component {...pageProps} />
+      <Home {...pageProps} />
     </main>
   )
 }
